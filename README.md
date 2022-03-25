@@ -90,6 +90,22 @@ Your code has been rated at 7.01/10
 ### pytest script
 
 ```angular2html
+$ pytest test_transactions.py
+=================================================================================== test session starts ===================================================================================
+platform darwin -- Python 3.9.7, pytest-7.1.0, pluggy-1.0.0
+rootdir: /Users/shiyuran/PycharmProjects/cs103a-pa02, configfile: pytest.ini
+collected 7 items
+
+test_transactions.py .......                                                                                                                                                        [100%]
+
+==================================================================================== 7 passed in 0.28s ====================================================================================
+```
+
+### tracker.py script
+
+Here's an example of running the finance tracker
+
+```angular2html
 $ python tracker.py
 
 0. quit

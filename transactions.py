@@ -1,4 +1,6 @@
 import sqlite3
+
+
 #
 # here are some helper function to change the query result of database
 #
@@ -14,6 +16,7 @@ def to_trans_dict(trans_tuple):
              'description': trans_tuple[5]}
     return trans
 
+
 # convert a list of category tuples into a list of dictionaries
 # Author: Tony Qiu
 def to_trans_dict_list(trans_tuple):
@@ -27,6 +30,7 @@ def to_sum_trans_dict(trans_tuple):
              'sum': trans_tuple[1]}
     return trans
 
+
 # convert a list of category tuples into a list of dictionaries
 # Author: Tony Qiu
 def to_sum_trans_dict_list(trans_tuple):
@@ -36,7 +40,7 @@ def to_sum_trans_dict_list(trans_tuple):
 # Transaction Class is DAO for transactions table in sqlite database
 # Author: Tony Qiu
 class Transaction():
-    def __init__(self,dbfile):
+    def __init__(self, dbfile):
         con = sqlite3.connect(dbfile)
         cur = con.cursor()
         cur.execute('''CREATE TABLE IF NOT EXISTS transactions

@@ -55,6 +55,7 @@ menu = '''
 11. print this menu
 '''
 
+
 # process choice function to handle user input
 # Author: Tony Qiu
 def process_choice(choice):
@@ -110,7 +111,7 @@ def process_choice(choice):
     elif choice == '10':
         trans = transaction.summarize_by_cat()
         print_sum_transactions('Category', trans)
-    elif choice == '11' or choice=='h' or choice == 'help':
+    elif choice == '11' or choice == 'h' or choice == 'help':
         print(menu)
     else:
         print("choice", choice, "not yet implemented")
@@ -151,6 +152,7 @@ def print_transaction(trans):
     print("%-3d %-15s %-10s %-15s %-15s %-30s"
           % (trans["rowid"], trans["name"], trans["amount"], trans["category"], trans["date"], trans["description"]))
 
+
 # output the records of trascations
 # Author: Tony Qiu
 def print_transactions(trans_ls):
@@ -159,6 +161,7 @@ def print_transactions(trans_ls):
     print('-' * 80)
     for trans in trans_ls:
         print_transaction(trans)
+
 
 # print a summarized transaction record
 # Author: Tony Qiu
